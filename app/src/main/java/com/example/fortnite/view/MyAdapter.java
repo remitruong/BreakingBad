@@ -50,11 +50,11 @@ public class MyAdapter extends RecyclerView.Adapter<ViewHolder> {
         holder.txtFirstLine.setText(currentWeapon.getName());
         holder.txtFooter.setText(currentWeapon.getDescription());
         Picasso.get()
-                .load("https://fortnite-public-files.theapinetwork.com/backpack/5884a1afe53cd064687e6fdb33fb55c2.png")  //Url of the image to load.
+                .load(currentWeapon.getImage())  //Url of the image to load.
                 .resize(100, 100)
                 .centerCrop()
                 .into(holder.image);
-
+        System.out.println(currentWeapon.getImage());
     }
 
     // Return the size of your dataset (invoked by the layout manager)
