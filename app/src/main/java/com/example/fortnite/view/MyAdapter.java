@@ -1,9 +1,12 @@
-package com.example.fortnite;
+package com.example.fortnite.view;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import com.example.fortnite.R;
+import com.example.fortnite.model.Weapon;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -45,7 +48,13 @@ public class MyAdapter extends RecyclerView.Adapter<ViewHolder> {
         // - replace the contents of the view with that element
         final Weapon currentWeapon = values.get(position);
         holder.txtFirstLine.setText(currentWeapon.getName());
-        holder.txtFooter.setText("Footer: " + currentWeapon.getName());
+        holder.txtFooter.setText(currentWeapon.getDescription());
+        Picasso.get()
+                .load("https://fortnite-public-files.theapinetwork.com/backpack/5884a1afe53cd064687e6fdb33fb55c2.png")  //Url of the image to load.
+                .resize(100, 100)
+                .centerCrop()
+                .into(holder.image);
+
     }
 
     // Return the size of your dataset (invoked by the layout manager)
@@ -53,5 +62,6 @@ public class MyAdapter extends RecyclerView.Adapter<ViewHolder> {
     public int getItemCount() {
         return values.size();
     }
+
 
 }

@@ -8,7 +8,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Injection {
 
     static final String BASE_URL = "https://fortnite-public-api.theapinetwork.com/";
-    //static final String BASE_URL = "https://pokeapi.co/api/v2/";
 
     //TODO Faire un singleton.
     public static FortniteRestApi getRestApiInstance(){

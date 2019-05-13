@@ -1,4 +1,4 @@
-package com.example.fortnite;
+package com.example.fortnite.model;
 
 import java.util.List;
 

@@ -1,8 +1,13 @@
-package com.example.fortnite;
+package com.example.fortnite.model;
+
+import android.media.Image;
+
+import java.util.List;
 
 public class Weapon {
     private String name;
     private String url;
+    private String description;
 
     public String getName() {
         return name;
@@ -16,4 +21,7 @@ public class Weapon {
         return url;
     }
 
+    public String getDescription() {
+        return description;
+    }
 }
