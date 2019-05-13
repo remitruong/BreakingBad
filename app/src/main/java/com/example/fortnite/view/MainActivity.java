@@ -1,9 +1,13 @@
-package com.example.fortnite;
+package com.example.fortnite.view;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import com.example.fortnite.Injection;
+import com.example.fortnite.R;
+import com.example.fortnite.control.MainController;
+import com.example.fortnite.model.Weapon;
 
 import java.util.List;
 

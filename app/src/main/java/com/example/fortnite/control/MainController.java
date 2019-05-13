@@ -1,5 +1,9 @@
-package com.example.fortnite;
+package com.example.fortnite.control;
 
+import com.example.fortnite.FortniteRestApi;
+import com.example.fortnite.view.MainActivity;
+import com.example.fortnite.model.RestWeaponResponse;
+import com.example.fortnite.model.Weapon;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
