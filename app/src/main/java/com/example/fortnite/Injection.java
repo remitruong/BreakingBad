@@ -8,20 +8,22 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Injection {
 
     static final String BASE_URL = "https://fortnite-public-api.theapinetwork.com/";
+    private static FortniteRestApi fortniteRestApi;
 
-    //TODO Faire un singleton.
-    public static FortniteRestApi getRestApiInstance(){
-        //Debut creation instance de l'interface PokemonRestApi
-        Gson gson = new GsonBuilder()
-                .setLenient()
-                .create();
+    //Singleton
+    public static FortniteRestApi getInstance(){
+        if(fortniteRestApi == null){
+            Gson gson = new GsonBuilder()
+                    .setLenient()
+                    .create();
 
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create(gson))
-                .build();
-
-        //FIN creation instance de l'interface PokemonRestApi
-        return retrofit.create(FortniteRestApi.class);
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create(gson))
+                    .build();
+            fortniteRestApi = retrofit.create(FortniteRestApi.class);
+        }
+        return fortniteRestApi;
     }
+
 }
