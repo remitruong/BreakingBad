@@ -3,7 +3,7 @@ package com.example.fortnite.control;
 import com.example.fortnite.FortniteRestApi;
 import com.example.fortnite.view.MainActivity;
 import com.example.fortnite.model.RestWeaponResponse;
-import com.example.fortnite.model.Weapon;
+import com.example.fortnite.model.UpcomingItem;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -27,14 +27,13 @@ public class MainController {
             public void onResponse(Call<RestWeaponResponse> call, Response<RestWeaponResponse> response) {
                 if(response.isSuccessful()) {
                     RestWeaponResponse restWeaponResponse = response.body();
-                    List<Weapon> weaponList = restWeaponResponse.getResults();
-                    System.out.println(weaponList.toArray());
-                    view.showList(weaponList);
+                    List<UpcomingItem> upcomingItemList = restWeaponResponse.getResults();
+                    System.out.println(upcomingItemList.toArray());
+                    view.showList(upcomingItemList);
                 } else {
                     System.out.println(response.errorBody());
                 }
             }
-
             @Override
             public void onFailure(Call<RestWeaponResponse> call, Throwable t) {
                 System.err.println("Failure API");

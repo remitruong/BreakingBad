@@ -1,6 +1,6 @@
 package com.example.fortnite.model;
 
-public class Item extends Weapon {
+public class Item extends UpcomingItem {
 
     private String image;
 

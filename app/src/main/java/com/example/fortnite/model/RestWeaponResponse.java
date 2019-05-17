@@ -5,9 +5,9 @@ import java.util.List;
 public class RestWeaponResponse {
 
     private Integer count;
-    private List<Weapon> items;
+    private List<UpcomingItem> items;
 
-    public List<Weapon> getResults(){
+    public List<UpcomingItem> getResults(){
         return items;
     }
 }
