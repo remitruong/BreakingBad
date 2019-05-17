@@ -34,7 +34,6 @@ public class MainController {
                     System.out.println(response.errorBody());
                 }
             }
-
             @Override
             public void onFailure(Call<RestWeaponResponse> call, Throwable t) {
                 System.err.println("Failure API");

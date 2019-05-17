@@ -1,5 +1,6 @@
 package com.example.fortnite.view;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
@@ -13,11 +14,11 @@ public class ViewHolder extends RecyclerView.ViewHolder {
     public ImageView image;
     public View layout;
 
-    public ViewHolder(View v) {
-        super(v);
-        layout = v;
-        txtFirstLine = (TextView) v.findViewById(R.id.firstLine);
-        txtFooter = (TextView) v.findViewById(R.id.secondLine);
-        image = (ImageView) v.findViewById(R.id.icon);
+    public ViewHolder(View view) {
+        super(view);
+        layout = view;
+        txtFirstLine = (TextView) view.findViewById(R.id.firstLine);
+        txtFooter = (TextView) view.findViewById(R.id.secondLine);
+        image = (ImageView) view.findViewById(R.id.icon);
     }
 }
