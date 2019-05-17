@@ -1,8 +1,8 @@
 package com.example.fortnite.model;
 
-import java.util.List;
+import java.io.Serializable;
 
-public class Weapon {
+public class UpcomingItem implements Serializable {
     private String name;
     private String url;
     private String description;

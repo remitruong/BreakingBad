@@ -7,7 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import com.example.fortnite.Injection;
 import com.example.fortnite.R;
 import com.example.fortnite.control.MainController;
-import com.example.fortnite.model.Weapon;
+import com.example.fortnite.model.UpcomingItem;
 
 import java.util.List;
 
@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
         controller.start();
     }
 
-    public void showList(final List<Weapon> weaponList) {
+    public void showList(final List<UpcomingItem> upcomingItemList) {
         //Initialisation de la variable recyclerView
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
         //Optimisation des performances Merci la documentation.
@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
         recyclerView.setLayoutManager(layoutManager);
         // define an adapter
         //Initialisation de la variable mAdapter
-        mAdapter = new MyAdapter(weaponList);
+        mAdapter = new MyAdapter(upcomingItemList);
         recyclerView.setAdapter(mAdapter);
     }
 }

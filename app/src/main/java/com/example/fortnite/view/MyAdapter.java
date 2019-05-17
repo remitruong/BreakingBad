@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.example.fortnite.R;
-import com.example.fortnite.model.Weapon;
+import com.example.fortnite.model.UpcomingItem;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -14,11 +14,11 @@ import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<ViewHolder> {
 
-    private List<Weapon> values;
+    private List<UpcomingItem> listItem;
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public MyAdapter(List<Weapon> myDataset) {
-        values = myDataset;
+    public MyAdapter(List<UpcomingItem> myDataset) {
+        listItem = myDataset;
     }
 
     // Create new views (invoked by the layout manager)
@@ -38,18 +38,19 @@ public class MyAdapter extends RecyclerView.Adapter<ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, final int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        final Weapon currentWeapon = values.get(position);
-        holder.txtFirstLine.setText(currentWeapon.getName());
-        holder.txtFirstLine.setOnClickListener(new View.OnClickListener() {
+        final UpcomingItem currentUpcomingItem = listItem.get(position);
+        holder.txtFirstLine.setText(currentUpcomingItem.getName());
+        holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), SecondActivity.class);
+                intent.putExtra("Item", listItem.get(position));
                 v.getContext().startActivity(intent);
             }
         });
-        holder.txtFooter.setText(currentWeapon.getDescription());
+        holder.txtFooter.setText(currentUpcomingItem.getDescription());
         Picasso.get()
-                .load(currentWeapon.getImage())  //Url of the image to load.
+                .load(currentUpcomingItem.getImage())  //Url of the image to load.
                 .resize(100, 100)
                 .centerCrop()
                 .into(holder.image);
@@ -58,7 +59,7 @@ public class MyAdapter extends RecyclerView.Adapter<ViewHolder> {
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        return values.size();
+        return listItem.size();
     }
 
 
