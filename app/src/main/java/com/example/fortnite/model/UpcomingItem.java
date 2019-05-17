@@ -7,6 +7,7 @@ public class UpcomingItem implements Serializable {
     private String url;
     private String description;
     private Item item;
+    private Ratings ratings;
 
     public String getName() {
         return name;
@@ -18,6 +19,10 @@ public class UpcomingItem implements Serializable {
 
     public Item getItem() {
         return item;
+    }
+
+    public Ratings getRatings() {
+        return ratings;
     }
 
     public String getImage(){

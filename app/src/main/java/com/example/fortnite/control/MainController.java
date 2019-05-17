@@ -28,7 +28,6 @@ public class MainController {
                 if(response.isSuccessful()) {
                     RestWeaponResponse restWeaponResponse = response.body();
                     List<UpcomingItem> upcomingItemList = restWeaponResponse.getResults();
-                    System.out.println(upcomingItemList.toArray());
                     view.showList(upcomingItemList);
                 } else {
                     System.out.println(response.errorBody());
@@ -36,7 +35,7 @@ public class MainController {
             }
             @Override
             public void onFailure(Call<RestWeaponResponse> call, Throwable t) {
-                System.err.println("Failure API");
+                System.err.println("Erreur lors de l'appel de l'API");
             }
         });
     }

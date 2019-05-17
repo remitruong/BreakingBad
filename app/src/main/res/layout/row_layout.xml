@@ -12,7 +12,8 @@
             android:layout_alignParentTop="true"
             android:layout_marginRight="6dip"
             android:contentDescription="item_icon"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_launcher"
+            android:background="@color/ic_launcher_background"/>
 
     <TextView
             android:id="@+id/secondLine"
