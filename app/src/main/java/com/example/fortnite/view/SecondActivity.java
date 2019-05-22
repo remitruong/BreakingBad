@@ -28,6 +28,6 @@ public class SecondActivity extends Activity {
         avgStarsTextView.append(upcomingItem.getRatings().getAvgStars());
         totalPointsTextView.append(upcomingItem.getRatings().getTotalPoints());
         numberVotesTextView.append(upcomingItem.getRatings().getNumberVotes());
-
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
     }
 }
