@@ -20,6 +20,7 @@
         <activity android:name=".view.SecondActivity"
                   android:label="item">
         </activity>
+
     </application>
 
 </manifest>
