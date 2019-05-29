@@ -26,12 +26,18 @@ git clone https://github.com/remitruong/fortnite.git
 * Appel d'une API Rest
 * Stockage des données en cache
 * 3 écrans : 1 SplashScreen et 2 activités
-* Affichage d'une liste dans un RecyclerView 
-* Affichage du détail de l'item de la liste
+    - Affichage d'une liste dans un RecyclerView 
+    - Affichage du détail de l'item de la liste
 * Gitflow
 * Animation entre les écrans
-* Application des principes du design Material : CardView, Icon, liste
-* Utilisation de plusieurs design pattern : Singleton, Injection de dépendance, Adapter et Facade
+* Application des principes du design Material : 
+    - CardView
+    - Icon
+    - liste
+* Utilisation de plusieurs design pattern : 
+    - Singleton
+    - Injection de dépendance
+    - Adapter et Facade
 * Héritage
 
 
@@ -39,5 +45,20 @@ git clone https://github.com/remitruong/fortnite.git
 
 ### Premier écran 
 
-Please make sure to update tests as appropriate.
+* Splash screen affichant Thanos 
+<img src="screen/splash.jpg" alt="splash">
+
+
+### Ecran principal
+
+* Affiche la liste des prochains éléments disponible sur le jeu
+<img src="screen/liste1.jpg" alt="liste1"> <img src="screen/liste2.jpg" alt="liste2">
+
+### Ecran secondaire
+
+* Affiche les détails de l'élément dans une CardView
+
+<img src="screen/card1.jpg" alt="card1"> <img src="screen/card2.jpg" alt="card2">
+
+
 
