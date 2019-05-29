@@ -46,18 +46,18 @@ git clone https://github.com/remitruong/fortnite.git
 ### Premier écran 
 
 * Splash screen affichant Thanos 
-<img src="screen/splash.jpg" alt="splash" width="300px" height="500px">
+<img src="screen/splash.jpg" alt="splash" width="300px" height="600px">
 
 ### Ecran principal
 
 * Affiche la liste des prochains éléments disponible sur le jeu
-<img src="screen/liste_1.jpg" alt="liste1" width="300px" height="500px> <img src="screen/liste_2.jpg" alt="liste2" width="300px" height="500px>
+<img src="screen/liste_1.jpg" alt="liste1" width="300px" height="600px"> <img src="screen/liste_2.jpg" alt="liste2" width="300px" height="600px">
 
 ### Ecran secondaire
 
 * Affiche les détails de l'élément dans une CardView
 
-<img src="screen/card_1.jpg" alt="card1" width="300px" height="500px> <img src="screen/card_2.jpg" alt="card2" width="300px" height="500px>
+<img src="screen/card_1.jpg" alt="card1" width="300px" height="600px"> <img src="screen/card_2.jpg" alt="card2" width="300px" height="600px>
 
 
 
