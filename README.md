@@ -46,10 +46,12 @@ git clone https://github.com/remitruong/fortnite.git
 ### Premier écran 
 
 * Splash screen affichant Thanos 
+
 <img src="screen/splash.jpg" alt="splash" width="200px" height="400px">
 ### Ecran principal
 
 * Affiche la liste des prochains éléments disponible sur le jeu
+
 <img src="screen/liste_1.jpg" alt="liste1" width="200px" height="400px"> <img src="screen/liste_2.jpg" alt="liste2" width="200px" height="400px">
 
 ### Ecran secondaire
