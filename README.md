@@ -46,7 +46,7 @@ git clone https://github.com/remitruong/fortnite.git
 ### Premier écran 
 
 * Splash screen affichant Thanos 
-<img src="screen/splash.jpg" alt="splash" width="268" height="467">
+<img src="screen/splash.jpg" alt="splash" width="200px" height="400px">
 
 ### Ecran principal
 
