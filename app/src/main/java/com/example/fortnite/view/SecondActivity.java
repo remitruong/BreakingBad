@@ -25,6 +25,7 @@ public class SecondActivity extends Activity {
                 .into(imgView);
         itemTextView.setText(upcomingItem.getName());
         rarityTextView.append(upcomingItem.getItem().getRarity());
+        avgStarsTextView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.icon, 0, 0, 0);
         avgStarsTextView.append(upcomingItem.getRatings().getAvgStars());
         totalPointsTextView.append(upcomingItem.getRatings().getTotalPoints());
         numberVotesTextView.append(upcomingItem.getRatings().getNumberVotes());

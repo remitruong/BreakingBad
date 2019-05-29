@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                                    xmlns:tools="http://schemas.android.com/tools"
                                     xmlns:app="http://schemas.android.com/apk/res-auto"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -10,20 +9,10 @@
                                     app:cardCornerRadius="2dp"
                                     app:cardElevation="2dp">
 
-    <!-- Les CardView possèdent des attributs supplémentaires dont
-         - cardBackgroundColor
-         - cardElevation pour l'élévation (donc aussi l'ombre)
-         - cardCornerRadius pour arrondir les angles
-     -->
-
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-        <!-- Les CardView agissent comme des FrameLayout,
-         pour avoir une organisation verticale nous devons
-         donc rajouter un LinearLayout -->
 
         <ImageView
                 android:id="@+id/item_icon"
@@ -32,13 +21,14 @@
                 android:contentDescription="item_icon"
                 android:background="@color/ic_launcher_background"
                 android:src="@mipmap/ic_launcher"
-                />
+        />
 
         <TextView
                 android:id="@+id/item_name"
                 android:text="Item name"
                 android:textSize="25dp"
                 android:textStyle="bold"
+                android:gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:selectableItemBackground"
@@ -49,8 +39,9 @@
                 android:text="Description :"
                 android:ems="10"
                 android:textStyle="bold"
+                android:gravity="center_vertical"
                 android:textSize="15dp"
-                
+
                 android:padding="15dp"
                 android:id="@+id/description_text"/>
 
@@ -59,6 +50,7 @@
                 android:text="Rarity : "
                 android:textSize="15dp"
                 android:padding="15dp"
+                android:gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/rarity_text"/>
@@ -66,6 +58,7 @@
                 android:text="Average stars : "
                 android:textSize="15dp"
                 android:padding="15dp"
+                android:gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/avgStars_text"/>
@@ -73,17 +66,19 @@
                 android:text="Total points : "
                 android:textSize="15dp"
                 android:padding="15dp"
+                android:gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/totalPoints_text"
-/>
+        />
         <TextView
                 android:text="Number of votes : "
                 android:padding="15dp"
+                android:gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/numberVotes_text"
-/>
+        />
 
     </LinearLayout>
 
