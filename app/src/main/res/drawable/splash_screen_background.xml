@@ -4,7 +4,7 @@
     <item android:drawable="@color/ic_launcher_background"/>
 
     <!-- Set the Background Image-->
-    <item android:gravity="center" android:width="500dp" android:height="700dp">
+    <item android:gravity="center" android:width="375dp" android:height="375dp">
         <bitmap
                 android:gravity="fill_horizontal|fill_vertical"
                 android:src="@drawable/splash_screen"/>
