@@ -1,9 +1,9 @@
-package com.example.fortnite.view;
+package com.example.breakingbad.view;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import com.example.fortnite.R;
+import com.example.breakingbad.R;
 
 public class SplashActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.fortnite;
+package com.example.breakingbad;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -7,12 +7,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Injection {
 
-    static final String BASE_URL = "https://fortnite-public-api.theapinetwork.com/";
-    private static FortniteRestApi fortniteRestApi;
-
+    static final String BASE_URL = "https://www.breakingbadapi.com/api/";
+    private static BreakingBadRestApi breakingBadRestApi;
     //Singleton
-    public static FortniteRestApi getInstance(){
-        if(fortniteRestApi == null){
+    public static BreakingBadRestApi getInstance(){
+        if(breakingBadRestApi == null){
             Gson gson = new GsonBuilder()
                     .setLenient()
                     .create();
@@ -21,9 +20,8 @@ public class Injection {
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .build();
-            fortniteRestApi = retrofit.create(FortniteRestApi.class);
+            breakingBadRestApi = retrofit.create(BreakingBadRestApi.class);
         }
-        return fortniteRestApi;
+        return breakingBadRestApi;
     }
-
 }

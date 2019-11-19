@@ -1,10 +1,10 @@
-package com.example.fortnite.view;
+package com.example.breakingbad.view;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.example.fortnite.R;
+import com.example.breakingbad.R;
 
 public class ViewHolder extends RecyclerView.ViewHolder {
     // each data item is just a string in this case

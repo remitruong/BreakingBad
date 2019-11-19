@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="match_parent" android:layout_width="match_parent">
-
-    <item android:drawable="@color/ic_launcher_background"/>
-
     <!-- Set the Background Image-->
     <item android:gravity="center" android:width="375dp" android:height="375dp">
         <bitmap
                 android:gravity="fill_horizontal|fill_vertical"
-                android:src="@drawable/splash_screen"/>
+                android:src="@drawable/breaking_bad_image"/>
     </item>
 </layer-list>

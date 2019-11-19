@@ -15,17 +15,16 @@
             android:orientation="vertical">
 
         <ImageView
-                android:id="@+id/item_icon"
+                android:id="@+id/character_img"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:contentDescription="item_icon"
-                android:background="@color/ic_launcher_background"
+                android:contentDescription="character_img"
                 android:src="@mipmap/ic_launcher"
         />
 
         <TextView
-                android:id="@+id/item_name"
-                android:text="Item name"
+                android:id="@+id/character_name"
+                android:text="Character name"
                 android:textSize="25dp"
                 android:textStyle="bold"
                 android:gravity="center_vertical"
@@ -36,48 +35,48 @@
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Description :"
+                android:text="Nickname :"
                 android:ems="10"
                 android:textStyle="bold"
                 android:gravity="center_vertical"
                 android:textSize="15dp"
 
                 android:padding="15dp"
-                android:id="@+id/description_text"/>
+                android:id="@+id/nickname_text"/>
 
         <TextView
 
-                android:text="Rarity : "
+                android:text="Birthday : "
                 android:textSize="15dp"
                 android:padding="15dp"
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/rarity_text"/>
+                android:id="@+id/birthday_text"/>
         <TextView
-                android:text="Average stars : "
+                android:text="Status : "
                 android:textSize="15dp"
                 android:padding="15dp"
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/avgStars_text"/>
+                android:id="@+id/status_text"/>
         <TextView
-                android:text="Total points : "
+                android:text="Portrayed : "
                 android:textSize="15dp"
                 android:padding="15dp"
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/totalPoints_text"
+                android:id="@+id/portrayed_text"
         />
         <TextView
-                android:text="Number of votes : "
+                android:text="Occupation : "
                 android:padding="15dp"
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/numberVotes_text"
+                android:id="@+id/occupation_text"
         />
 
     </LinearLayout>
