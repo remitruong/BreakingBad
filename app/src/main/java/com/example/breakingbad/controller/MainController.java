@@ -1,6 +1,7 @@
 package com.example.breakingbad.controller;
 
 import android.content.SharedPreferences;
+import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.util.Log;
 import com.example.breakingbad.BreakingBadRestApi;
@@ -23,8 +24,7 @@ public class MainController implements Callback<List<BreakingBadCharacter>>{
     private BreakingBadRestApi breakingBadRestApi;
     private SharedPreferences sharedPreferences;
 
-    public MainController(MainActivity view, BreakingBadRestApi breakingBadRestApi, SharedPreferences sharedPreferences) {
-        this.view = view;
+    public MainController(Fragment fragment, BreakingBadRestApi breakingBadRestApi, SharedPreferences sharedPreferences) {
         this.breakingBadRestApi = breakingBadRestApi;
         this.sharedPreferences = sharedPreferences;
     }
@@ -40,7 +40,7 @@ public class MainController implements Callback<List<BreakingBadCharacter>>{
             List<BreakingBadCharacter> breakingBadCharacterList = response.body();
             storeData(breakingBadCharacterList);
             //Log.d("retour API", new GsonBuilder().setPrettyPrinting().create().toJson(response));
-            view.showList(breakingBadCharacterList);
+            //view.showList(breakingBadCharacterList);
             //Log.d("LISTE DES CHAMPIONS : ", breakingBadCharacterList.toString());
         } else {
             System.out.println(response.errorBody());
@@ -51,7 +51,7 @@ public class MainController implements Callback<List<BreakingBadCharacter>>{
     public void onFailure(Call<List<BreakingBadCharacter>> call, Throwable t) {
 //Log.d("API ERROR", "onFailure");
         List<BreakingBadCharacter> breakingBadCharacterList = getDataFromCache();
-        view.showList(breakingBadCharacterList);
+        //view.showList(breakingBadCharacterList);
         //t.printStackTrace();
     }
 
@@ -64,12 +64,13 @@ public class MainController implements Callback<List<BreakingBadCharacter>>{
                 .apply();
     }
 
-    private List<BreakingBadCharacter>  getDataFromCache() {
+    public List<BreakingBadCharacter>  getDataFromCache() {
+        List<BreakingBadCharacter> breakingBadCharacterList;
         String listBreakingBadCharacterString = sharedPreferences.getString("cle_string", "");
         if(listBreakingBadCharacterString != null && !TextUtils.isEmpty(listBreakingBadCharacterString)){
             Type listType = new TypeToken<List<BreakingBadCharacter>>(){}.getType();
-            List<BreakingBadCharacter> upcomingItemList = new Gson().fromJson(listBreakingBadCharacterString, listType);
-            return upcomingItemList;
+            breakingBadCharacterList = new Gson().fromJson(listBreakingBadCharacterString, listType);
+            return breakingBadCharacterList;
         }
         return new ArrayList<>();
     }
