@@ -12,7 +12,7 @@ public class SecondActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        setContentView(R.layout.activity_details);
         BreakingBadCharacter breakingBadCharacter = (BreakingBadCharacter) getIntent().getSerializableExtra("BreakingBadCharacter");
         TextView characterTextView = findViewById(R.id.character_name);
         TextView nicknameTextView = findViewById(R.id.nickname_text);
@@ -29,11 +29,6 @@ public class SecondActivity extends Activity {
         birthdayTextView.append(breakingBadCharacter.getBirthday());
         statusTextView.append(breakingBadCharacter.getStatus());
         portrayedTextView.append(breakingBadCharacter.getPortrayed());
-        int taille = breakingBadCharacter.getOccupation().size();
-        String occupation= "";
-        for (int i = taille; i < 0; i++) {
-         occupation+= breakingBadCharacter.getOccupation().get(i);
-        }
-        occupationTextView.append(occupation);
+        occupationTextView.append(breakingBadCharacter.getOccupation());
     }
 }

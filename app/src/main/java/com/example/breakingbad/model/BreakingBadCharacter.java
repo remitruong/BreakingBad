@@ -12,8 +12,13 @@ public class BreakingBadCharacter implements Serializable {
     private String nickname;
     private String portrayed;
 
-    public List<String> getOccupation() {
-        return occupation;
+    public String getOccupation(){
+        int taille = occupation.size();
+        String s ="";
+        for (int i = 0; i<taille; i++){
+            s += occupation.get(i) + "\n";
+        }
+        return s;
     }
 
     public String getBirthday() {

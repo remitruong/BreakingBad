@@ -15,14 +15,13 @@ import com.example.breakingbad.model.BreakingBadCharacter;
 
 import java.util.List;
 
-public class CharacterFragment extends Fragment {
+public class HomeFragment extends Fragment {
     private MainController controller;
     private RecyclerView recyclerView;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_characters,
+        View view = inflater.inflate(R.layout.fragment_home,
                 container, false);
 
         recyclerView = view.findViewById(R.id.my_recycler_view);

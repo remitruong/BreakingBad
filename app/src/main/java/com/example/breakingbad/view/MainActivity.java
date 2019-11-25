@@ -1,18 +1,16 @@
 package com.example.breakingbad.view;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
+import android.view.MenuItem;
 import com.example.breakingbad.R;
 
 
-import java.util.List;
-
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+        implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     //Déclaration des variables.
     private RecyclerView recyclerView;
@@ -23,14 +21,38 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        loadFragment(new CharacterFragment());
+
+        BottomNavigationView navigation = findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(this);
     }
 
-    private void loadFragment(Fragment fragment) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.container, fragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
+    private boolean loadFragment(Fragment fragment){
+        if(fragment != null){
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, fragment)
+                    .commit();
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(MenuItem menuItem) {
+        Fragment fragment = null;
+        switch (menuItem.getItemId()){
+
+            case R.id.navigation_home:
+                fragment = new HomeFragment();
+                break;
+            case R.id.navigation_notifications:
+                fragment = new NotificationsFragment();
+                break;
+            case R.id.navigation_favorites:
+                fragment = new FavoritesFragment();
+                break;
+        }
+        return loadFragment(fragment);
     }
 
 }
