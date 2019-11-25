@@ -75,5 +75,16 @@ public class MainController implements Callback<List<BreakingBadCharacter>>{
         return new ArrayList<>();
     }
 
+    public List<BreakingBadCharacter> getDeathsList(List<BreakingBadCharacter> bbList){
+        List<BreakingBadCharacter> deathsList = new ArrayList<>();
+        for (BreakingBadCharacter bbCharacter: bbList) {
+            System.out.println("***********" + bbCharacter.getName() + "====>" + bbCharacter.getStatus() +"***********");
+            if (bbCharacter != null && bbCharacter.getStatus().equals("Deceased")) {
+                deathsList.add(bbCharacter);
+            }
+        }
+        return deathsList;
+    }
+
 
 }
