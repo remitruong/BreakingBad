@@ -57,14 +57,14 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Season 1"/>
+                android:text="Season"/>
 
         <android.support.design.widget.FloatingActionButton
                 android:id="@+id/fab1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                app:srcCompat="@android:drawable/ic_dialog_email"
+                app:srcCompat="@drawable/number_1"
                 app:fabSize="mini"/>
     </LinearLayout>
 
@@ -83,14 +83,14 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Season 2"/>
+                android:text="Season"/>
 
         <android.support.design.widget.FloatingActionButton
                 android:id="@+id/fab2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                app:srcCompat="@drawable/ic_camera"
+                app:srcCompat="@drawable/number_2"
                 app:fabSize="mini"/>
     </LinearLayout>
 
@@ -110,15 +110,14 @@
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Season 3"/>
+            android:text="Season"/>
 
     <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            app:srcCompat="@drawable/ic_mic"
-            android:tint="@android:color/white"
+            app:srcCompat="@drawable/number_3"
             app:fabSize="mini"/>
 </LinearLayout>
     <LinearLayout
@@ -136,15 +135,14 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Season 4"/>
+                android:text="Season"/>
 
         <android.support.design.widget.FloatingActionButton
                 android:id="@+id/fab4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                app:srcCompat="@drawable/ic_mic"
-                android:tint="@android:color/white"
+                app:srcCompat="@drawable/number_4"
                 app:fabSize="mini"/>
     </LinearLayout>
 
@@ -163,15 +161,14 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Season 5"/>
+                android:text="Season"/>
 
         <android.support.design.widget.FloatingActionButton
                 android:id="@+id/fab5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                app:srcCompat="@drawable/ic_mic"
-                android:tint="@android:color/white"
+                app:srcCompat="@drawable/number_5"
                 app:fabSize="mini"/>
     </LinearLayout>
 
@@ -193,7 +190,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
                 android:gravity="center_vertical"
-                app:srcCompat="@drawable/ic_toys"
+                app:srcCompat="@drawable/ic_list"
                 app:fabSize="normal"/>
     </LinearLayout>
 

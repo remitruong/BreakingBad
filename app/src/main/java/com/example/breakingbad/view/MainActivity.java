@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.navigation_deaths:
                 fragment = new DeathsFragment();
                 break;
-            case R.id.navigation_favorites:
+            case R.id.navigation_seasons:
                 fragment = new FavoritesFragment();
                 break;
         }
