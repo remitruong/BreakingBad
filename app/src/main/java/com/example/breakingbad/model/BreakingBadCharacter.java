@@ -11,6 +11,7 @@ public class BreakingBadCharacter implements Serializable {
     private String status;
     private String nickname;
     private String portrayed;
+    private List<String> appearance;
 
     public String getOccupation(){
         int taille = occupation.size();
@@ -19,6 +20,10 @@ public class BreakingBadCharacter implements Serializable {
             s += occupation.get(i) + "\n";
         }
         return s;
+    }
+
+    public List<String> getAppearance() {
+        return appearance;
     }
 
     public String getBirthday() {
