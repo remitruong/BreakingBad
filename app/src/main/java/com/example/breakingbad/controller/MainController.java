@@ -3,12 +3,10 @@ package com.example.breakingbad.controller;
 import android.content.SharedPreferences;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
-import android.util.Log;
 import com.example.breakingbad.BreakingBadRestApi;
 import com.example.breakingbad.model.BreakingBadCharacter;
 import com.example.breakingbad.view.MainActivity;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -74,6 +72,34 @@ public class MainController implements Callback<List<BreakingBadCharacter>>{
         }
         return new ArrayList<>();
     }
+
+    public List<BreakingBadCharacter> getDeathsList(List<BreakingBadCharacter> bbList){
+        List<BreakingBadCharacter> deathsList = new ArrayList<>();
+        for (BreakingBadCharacter bbCharacter: bbList) {
+            //System.out.println("***********" + bbCharacter.getName() + "====>" + bbCharacter.getStatus() +"***********");
+            if (bbCharacter != null && bbCharacter.getStatus().equals("Deceased")) {
+                deathsList.add(bbCharacter);
+            }
+        }
+        return deathsList;
+    }
+
+    public List<BreakingBadCharacter> getListBySeason(List<BreakingBadCharacter> bbList, String season){
+        List<BreakingBadCharacter> bbCharacterList = new ArrayList<>();
+        for (BreakingBadCharacter bbCharacter: bbList) {
+            if (bbCharacter.getAppearance() != null){
+                for (String s: bbCharacter.getAppearance()) {
+                    if (s.equals(season)){
+                        //System.out.println("***********" + bbCharacter.getName() + "====>" + s +"***********");
+                        bbCharacterList.add(bbCharacter);
+                    }
+
+                }
+            }
+        }
+        return bbCharacterList;
+    }
+
 
 
 }
