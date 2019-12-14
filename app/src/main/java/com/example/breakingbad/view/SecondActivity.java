@@ -30,5 +30,6 @@ public class SecondActivity extends Activity {
         statusTextView.append(breakingBadCharacter.getStatus());
         portrayedTextView.append(breakingBadCharacter.getPortrayed());
         occupationTextView.append(breakingBadCharacter.getOccupation());
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
     }
 }
