@@ -9,7 +9,7 @@
 ## Présentation 
 Simple projet démontrant l'utilisation de l'architecture MVC et d'appel REST d'une API dans une application android.
 
-Cette application affiche la liste des personnages de la séries Breaking Bad.
+Cette application affiche la liste des personnages de la série Breaking Bad.
 Elle utilise une API qui permet de récupérer la liste des personnages présents dans la série.
 
 ## Prérequis
